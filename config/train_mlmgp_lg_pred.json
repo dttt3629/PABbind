@@ -1,0 +1,33 @@
+{  "data_config": {
+    "data_path": "abdataset/total_dup3.csv",
+    "emb_path":"graph/dms/",
+    "model_emb_path":"graph/dms/mlm_emb.bin",
+    "graph_path":"graph/dms/graph/"
+},
+  "model_config": {
+    "n_embd": 256,
+    "vocab_size": 26,
+    "max_atb_h_len": 142,
+    "max_atb_l_len": 124,
+    "max_atg_len": 203,
+    "test": true,
+    "is_continue":true,
+    "continue_path": "./ckpt/dmsmlmno_16_987_sg",
+    "graphmodel_path":  "mlm_gvp",
+    "node_s": 9,
+    "node_v": 3,
+    "edge_s": 37,
+    "edge_v": 3
+  },
+  "trainer_config": {
+    "max_epochs": 200,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "device": "cuda:1",
+    "ckpt_path": "dmsmlmno_16_987",
+    "use_scaler": true,
+    "num_workers": 16,
+    "parallel": false,
+    "lr_decay": true
+  }
+}
